@@ -1,0 +1,15 @@
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\bin\Debug\net6.0\Exercise3.exe
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\bin\Debug\net6.0\Exercise3.deps.json
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\bin\Debug\net6.0\Exercise3.runtimeconfig.json
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\bin\Debug\net6.0\Exercise3.dll
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\bin\Debug\net6.0\ref\Exercise3.dll
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\bin\Debug\net6.0\Exercise3.pdb
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\obj\Debug\net6.0\Exercise3.csproj.AssemblyReference.cache
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\obj\Debug\net6.0\Exercise3.GeneratedMSBuildEditorConfig.editorconfig
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\obj\Debug\net6.0\Exercise3.AssemblyInfoInputs.cache
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\obj\Debug\net6.0\Exercise3.AssemblyInfo.cs
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\obj\Debug\net6.0\Exercise3.csproj.CoreCompileInputs.cache
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\obj\Debug\net6.0\Exercise3.dll
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\obj\Debug\net6.0\ref\Exercise3.dll
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\obj\Debug\net6.0\Exercise3.pdb
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\obj\Debug\net6.0\Exercise3.genruntimeconfig.cache

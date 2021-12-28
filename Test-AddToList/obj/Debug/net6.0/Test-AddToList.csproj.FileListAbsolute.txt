@@ -1,0 +1,15 @@
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\bin\Debug\net6.0\Test-AddToList.exe
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\bin\Debug\net6.0\Test-AddToList.deps.json
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\bin\Debug\net6.0\Test-AddToList.runtimeconfig.json
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\bin\Debug\net6.0\Test-AddToList.dll
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\bin\Debug\net6.0\ref\Test-AddToList.dll
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\bin\Debug\net6.0\Test-AddToList.pdb
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\obj\Debug\net6.0\Test-AddToList.csproj.AssemblyReference.cache
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\obj\Debug\net6.0\Test-AddToList.GeneratedMSBuildEditorConfig.editorconfig
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\obj\Debug\net6.0\Test-AddToList.AssemblyInfoInputs.cache
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\obj\Debug\net6.0\Test-AddToList.AssemblyInfo.cs
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\obj\Debug\net6.0\Test-AddToList.csproj.CoreCompileInputs.cache
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\obj\Debug\net6.0\Test-AddToList.dll
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\obj\Debug\net6.0\ref\Test-AddToList.dll
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\obj\Debug\net6.0\Test-AddToList.pdb
+C:\C-Sharp-fundamentals\cs\Execise3\Test-AddToList\obj\Debug\net6.0\Test-AddToList.genruntimeconfig.cache
