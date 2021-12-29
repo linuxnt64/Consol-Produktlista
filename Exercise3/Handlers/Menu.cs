@@ -31,18 +31,23 @@ namespace Exercise3.Handlers
             char MenuPick;
             do
             {
-                ProductModel ProductItem = new();
+                ProductModel productItem = new();
                 MenuPick = (Console.ReadKey().KeyChar);
+                Console.Clear();
                 switch (MenuPick)
                 {
                     case '1':
-
-                        productHandler.Poke(ProductItem);
-                        listHandler.Write(ProductItem, almostDB);
+                        productHandler.Poke(productItem);
+                        listHandler.Write(productItem, almostDB);
                         break;
                     case '2':
-                        Console.WriteLine("Menu choice #2");
-                        listHandler.Print(ProductItem, almostDB);
+                        listHandler.Print(productItem, almostDB);
+                        break;
+                    case '3':
+                        productHandler.Peek(almostDB);
+                        break;
+                    case '4':
+                        productHandler.Purge(almostDB);
                         break;
                     default:
                         ShowMenu();

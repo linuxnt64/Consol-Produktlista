@@ -8,26 +8,30 @@ using System.Threading.Tasks;
 
 namespace Exercise3.Handlers
 {
-    public class ListHandler : IListHandler
+    public class ListHandler
     {
 
-        public int FindItem(string _searcher)
+        public static ProductModel FindItem(List<ProductModel> TheList, string term)
         {
-            Console.Write("\t\t\t\t *** Not correctly implemented yet ***");
-            return 1;
+            //           Console.Write("\t\t\t\t *** Not correctly implemented yet ***");
+
+            foreach (ProductModel findItem in TheList)
+            {
+                if (findItem.Id == term) { return findItem; }
+            }
+            return null;
         }
 
         public void Print(ProductModel productItem, List<ProductModel> TheList)
         {
-            Console.WriteLine("\t\t\t\t *** Maybe not correctly implemented yet ***");
             Console.WriteLine("produkter i listan:\n\n");
-            foreach(var item in TheList)
+            foreach (var item in TheList)
             {
-                Console.WriteLine($"{item.Id} {item.Name} {item.Quantity} á {item.Price} kr (st/kg/liter)  {item.Description}\n");
+                Console.WriteLine($"{item.Id} {item.Name} \n");
             }
         }
 
-        public void Retrieve(int index)
+        public static void Retrieve(string index)
         {
             throw new NotImplementedException();
         }
@@ -38,9 +42,20 @@ namespace Exercise3.Handlers
             Console.WriteLine($"item {productItem.Id} {productItem.Name} added to list");
         }
 
-        public void Delete(int _id)
+        public static bool Delete(List<ProductModel> TheList, string term)
         {
-            Console.Write("\t\t\t\t *** Not correctly implemented yet ***");
+            ProductModel foundItem = new();
+            foreach (ProductModel Item in TheList)
+            {
+                if (Item.Id == term)
+                {
+                    foundItem = Item;
+                    break;
+                }
+
+            }
+            return TheList.Remove(foundItem);
         }
     }
 }
+
