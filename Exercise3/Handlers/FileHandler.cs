@@ -9,15 +9,26 @@ using Exercise3.Models;
 
 namespace Exercise3.Handlers
 {
-    public class FileHandler
+    public class FileHandler : IFileHandler
     {
         public static void Stowe(string path, List<ProductModel> TheList)
         {
-            Console.WriteLine("Writing data to: " + path);
-            using (StreamWriter sw = new StreamWriter(path))
+            try
             {
-                sw.Write(JsonConvert.SerializeObject(TheList));
-                Console.ReadKey();
+                Console.WriteLine("Writing data to: " + path);
+                using (StreamWriter sw = new StreamWriter(path))
+                {
+                    sw.Write(JsonConvert.SerializeObject(TheList));
+                    Console.ReadKey();
+                }
+
+            }
+            catch
+            {
+                Console.WriteLine("\t¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\n" +
+                                  "\t¤¤¤¤¤¤  FEL:  Det gick inte att skriva till fil. Är sökvägen riktig ?  ¤¤¤¤¤¤\n" +
+                                 $"\t{path}\n" +
+                                  "\t¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤");
             }
 
         }
@@ -30,11 +41,10 @@ namespace Exercise3.Handlers
                 using (StreamReader sr = new StreamReader(path))
                 {
                     string data = sr.ReadToEnd();
-                    //Console.WriteLine(data);
-                    return JsonConvert.DeserializeObject<List<ProductModel>>(data);
                     Console.WriteLine("Klart: (Har läst data från fil)");
+                    return JsonConvert.DeserializeObject<List<ProductModel>>(data);
                 }
-                
+
             }
             catch
             {

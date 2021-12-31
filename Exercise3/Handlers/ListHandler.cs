@@ -1,28 +1,18 @@
 ﻿using Exercise3.Interfaces;
 using Exercise3.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise3.Handlers
 {
-    public class ListHandler
+    public class ListHandler : IListHandler
     {
 
-        public static ProductModel FindItem(List<ProductModel> TheList, string term)
+        public void Write(ProductModel productItem, List<ProductModel> TheList)
         {
-            //           Console.Write("\t\t\t\t *** Not correctly implemented yet ***");
-
-            foreach (ProductModel findItem in TheList)
-            {
-                if (findItem.Id == term) { return findItem; }
-            }
-            return null;
+            TheList.Add(productItem);
+            Console.WriteLine($"item {productItem.Id} {productItem.Name} added to list");
         }
 
-        public void Print(ProductModel productItem, List<ProductModel> TheList)
+        public void Print(List<ProductModel> TheList)
         {
             Console.WriteLine("Produkter i listan:\n\n");
             Console.WriteLine("Id_______Benämning____Första 35 tkn i beskrivningen\n");
@@ -32,10 +22,13 @@ namespace Exercise3.Handlers
             }
         }
 
-        public void Write(ProductModel productItem, List<ProductModel> TheList)
+        public static ProductModel FindItem(List<ProductModel> TheList, string term)
         {
-            TheList.Add(productItem);
-            Console.WriteLine($"item {productItem.Id} {productItem.Name} added to list");
+            foreach (ProductModel findItem in TheList)
+            {
+                if (findItem.Id == term) { return findItem; }
+            }
+            return null;
         }
 
         public static bool Delete(List<ProductModel> TheList, string term)

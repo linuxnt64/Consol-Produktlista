@@ -9,11 +9,11 @@ namespace Exercise3.Interfaces
     public interface IFileHandler
     {
         /// <summary>
-        /// Tries to save the list of products to a file and returns a boolean result
+        /// Saves a list of products to a file
         /// </summary>
-        /// <param name="List"></param>
-        /// <param name="fullFilePathAndName"></param>
-        extern static bool SaveToDisk(List<ProductModel> List, string fullFilePathAndName);
+        /// <param name="path"></param>
+        /// <param name="TheList"></param>
+        extern static void Stowe(string path, List<ProductModel> TheList);
 
         /// <summary>
         /// Tries to read the list of products from a file and returns a boolean result
@@ -21,6 +21,6 @@ namespace Exercise3.Interfaces
         /// <param name="List"></param>
         /// <param name="fullFilePathAndName"></param>
         /// <returns></returns>
-        extern static bool ReadFromDisk(List<ProductModel> List, string fullFilePathAndName);
+        extern static List<ProductModel> Retrieve(string path);
     }
 }

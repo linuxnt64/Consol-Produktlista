@@ -1,17 +1,10 @@
 ﻿using Exercise3.Interfaces;
 using Exercise3.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise3.Handlers
 {
     public class ProductHandler : IProductHandler
-
     {
-
         public void Peek(List<ProductModel> TheList)
         {
             ProductModel searchObject = new();

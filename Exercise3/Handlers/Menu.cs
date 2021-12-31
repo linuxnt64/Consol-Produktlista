@@ -1,10 +1,5 @@
 ﻿using Exercise3.Interfaces;
 using Exercise3.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise3.Handlers
 {
@@ -47,7 +42,7 @@ namespace Exercise3.Handlers
                         listHandler.Write(productItem, almostDB);
                         break;
                     case '2':
-                        listHandler.Print(productItem, almostDB);
+                        listHandler.Print(almostDB);
                         break;
                     case '3':
                         productHandler.Peek(almostDB);
