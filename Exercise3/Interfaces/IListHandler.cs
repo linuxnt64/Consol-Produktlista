@@ -8,21 +8,15 @@ using System.Threading.Tasks;
 
 namespace Exercise3.Interfaces
 {
-    internal interface IListHandler
+    public interface IListHandler
     {
-
-        /// <summary>
-        /// Read the indexed item from list into the object Product
-        /// </summary>
-        void Retrieve(int index);
-
         /// <summary>
         /// Remove an item from the list
         /// </summary>
         void Delete(int _id);
 
         /// <summary>
-        /// Put the object product into the list
+        /// Put the object into the list
         /// </summary>
         void Write(ProductModel anItem, List<ProductModel> aList);
 
@@ -35,5 +29,20 @@ namespace Exercise3.Interfaces
         /// Show all items in the list
         /// </summary>
         void Print(ProductModel anItem, List<ProductModel> aList);
+
+        /// <summary>
+        /// Write a list into a file on a storage
+        /// </summary>
+        /// <param name="aFilePath"></param>
+        /// <param name="aList"></param>
+        void Stove(string aFilePath, List<ProductModel> aList);
+
+        /// <summary>
+        /// Read a file from a storage into a list
+        /// </summary>
+        /// <param name="aFilePath"></param>
+        /// <param name="aList"></param>
+        void Retrieve(string aFilePath, List<ProductModel> aList);
+
     }
 }

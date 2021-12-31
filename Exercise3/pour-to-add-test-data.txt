@@ -1,15 +1,15 @@
 ﻿1Produkt1
 Testprodukt
-Produkt att testa systemet med
+Produkt (1) att testa systemet med, så att jag vet att allt fungerar som det är tänkt
 11
 12
 1Produkt2
 Testprodukt2
-Produkt att testa systemet med
+Produkt (2) Återigen för att testa systemet med, så att jag vet att allt fungerar som det är tänkt
 21
 22
 1Produkt3
 Testprodukt3
-Produkt att testa systemet med
+Produkt (3) Med risk att bli tjatig att testa systemet med, så att jag vet att allt fungerar som det är tänkt
 31
 32

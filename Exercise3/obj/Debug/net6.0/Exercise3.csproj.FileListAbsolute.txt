@@ -13,3 +13,5 @@ C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\obj\Debug\net6.0\Exercise3.dll
 C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\obj\Debug\net6.0\ref\Exercise3.dll
 C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\obj\Debug\net6.0\Exercise3.pdb
 C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\obj\Debug\net6.0\Exercise3.genruntimeconfig.cache
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\C-Sharp-fundamentals\cs\Execise3\Exercise3\obj\Debug\net6.0\Exercise3.csproj.CopyComplete

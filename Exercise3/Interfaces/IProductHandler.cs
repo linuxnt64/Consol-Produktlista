@@ -12,16 +12,20 @@ namespace Exercise3.Interfaces
         /// <summary>
         /// Prepare to retrieve an item from the list
         /// </summary>
-        void Peek();
+        /// <param name="SomeList"></param>
+        void Peek(List<ProductModel> SomeList);
 
         /// <summary>
         /// Prepare to put a new item into the list by populating object fields
         /// </summary>
+        /// <param name="SomeProduct"></param>
+
         void Poke(ProductModel SomeProduct);
 
         /// <summary>
         /// Clean item object 
         /// </summary>
-        void Purge();
+        /// <param name="SomeList"></param>
+        void Purge(List<ProductModel> SomeList);
     }
 }

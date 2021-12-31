@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace Exercise3.Handlers
 {
-    public class ProductHandler
+    public class ProductHandler : IProductHandler
 
     {
 
-        public void Peek(List<ProductModel> listPtr)
+        public void Peek(List<ProductModel> TheList)
         {
             ProductModel searchObject = new();
             Console.WriteLine("Visa produktinfo:\n\n");
             Console.Write("Skriv produktID :  ");
             string searchTerm = Console.ReadLine();
-            searchObject = (ListHandler.FindItem(listPtr, searchTerm));
+            searchObject = (ListHandler.FindItem(TheList, searchTerm));
 
             if (searchObject != null)
             {
@@ -60,15 +60,11 @@ namespace Exercise3.Handlers
 
         public void Purge(List<ProductModel> TheList)
         {
-            //Console.Write("\t\t\t\t *** Not correctly implemented yet ***");
             Console.WriteLine("%%%%%%%%%% Ta bort produkt från listan: %%%%%%%%%%\n\n");
             Console.Write("Skriv produktID :  ");
             string searchTerm = Console.ReadLine();
             bool res = ListHandler.Delete(TheList, searchTerm);
-            if (!res)
-            {
-                Console.WriteLine($"%%%%%%%%%% Något är fel, kunde inte radera { searchTerm} %%%%%%%%%% ");
-            }
+            if (!res) Console.WriteLine($"%%%%%%%%%% Något är fel, kunde inte radera { searchTerm} %%%%%%%%%% ");
             else Console.WriteLine($"ProduktID : {searchTerm} är nu raderad!");
         }
     }

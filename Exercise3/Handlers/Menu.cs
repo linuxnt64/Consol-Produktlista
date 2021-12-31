@@ -15,15 +15,21 @@ namespace Exercise3.Handlers
         public ProductHandler productHandler = new();
         public List<ProductModel> almostDB = new();
 
+        public static string fileLocation = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\ProductList2.txt";
+
         public void ShowMenu()
         {
             Console.Clear();
+
+            Console.WriteLine("   Menyval för ACME & Co produktkatalog:\n");
             Console.WriteLine("1. Lägg till en produkt");
             Console.WriteLine("2. Visa hela katalogen");
             Console.WriteLine("3. Visa spec. produkt");
             Console.WriteLine("4. Ta bort produkt");
-            Console.WriteLine("9. Avsluta programmet");
-            Console.WriteLine("\n Tryck på '0' för att visa menyvalen igen");
+            Console.WriteLine("\n6. Läs in från fil");
+            Console.WriteLine("7. Skriv till fil");
+            Console.WriteLine("\n9. Avsluta programmet");
+            Console.WriteLine("\n   Valfri övrig, för att visa menyvalen igen.");
         }
 
         public void GetMenuItem()
@@ -48,6 +54,12 @@ namespace Exercise3.Handlers
                         break;
                     case '4':
                         productHandler.Purge(almostDB);
+                        break;
+                    case '6':
+                        almostDB = FileHandler.Retrieve(fileLocation);
+                        break;
+                    case '7':
+                        FileHandler.Stowe(fileLocation, almostDB);
                         break;
                     default:
                         ShowMenu();

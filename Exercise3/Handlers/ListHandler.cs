@@ -24,16 +24,12 @@ namespace Exercise3.Handlers
 
         public void Print(ProductModel productItem, List<ProductModel> TheList)
         {
-            Console.WriteLine("produkter i listan:\n\n");
+            Console.WriteLine("Produkter i listan:\n\n");
+            Console.WriteLine("Id_______Benämning____Första 35 tkn i beskrivningen\n");
             foreach (var item in TheList)
             {
-                Console.WriteLine($"{item.Id} {item.Name} \n");
+                Console.WriteLine($"{item.Id} {item.Name}     {item.Description.Substring(0,35)}\n");
             }
-        }
-
-        public static void Retrieve(string index)
-        {
-            throw new NotImplementedException();
         }
 
         public void Write(ProductModel productItem, List<ProductModel> TheList)
@@ -56,6 +52,8 @@ namespace Exercise3.Handlers
             }
             return TheList.Remove(foundItem);
         }
+        
+
     }
 }
 
