@@ -13,7 +13,7 @@ namespace Exercise3.Interfaces
         /// </summary>
         /// <param name="path"></param>
         /// <param name="TheList"></param>
-        extern static void Stowe(string path, List<ProductModel> TheList);
+        void Stowe(string path, List<ProductModel> TheList);
 
         /// <summary>
         /// Tries to read the list of products from a file and returns a boolean result
@@ -21,6 +21,6 @@ namespace Exercise3.Interfaces
         /// <param name="List"></param>
         /// <param name="fullFilePathAndName"></param>
         /// <returns></returns>
-        extern static List<ProductModel> Retrieve(string path);
+        List<ProductModel> Retrieve(string path);
     }
 }

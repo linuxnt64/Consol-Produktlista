@@ -5,13 +5,14 @@ namespace Exercise3.Handlers
 {
     public class ProductHandler : IProductHandler
     {
+        ListHandler lh = new();
         public void Peek(List<ProductModel> TheList)
         {
             ProductModel searchObject = new();
             Console.WriteLine("Visa produktinfo:\n\n");
             Console.Write("Skriv produktID :  ");
             string searchTerm = Console.ReadLine();
-            searchObject = (ListHandler.FindItem(TheList, searchTerm));
+            searchObject = lh.FindItem(TheList, searchTerm);
 
             if (searchObject != null)
             {
@@ -26,29 +27,40 @@ namespace Exercise3.Handlers
             else { Console.WriteLine("### Ingen produkt med detta ID finns ###"); }
         }
 
-        public void Poke(ProductModel theProduct)
+        public void Poke(List<ProductModel> TheList)
         {
+            ProductModel productItem = new();
+            string temp = "";
+
             Console.WriteLine("Ny produkt:\n\n");
             Console.Write("Produktbenämning ? ");
-            theProduct.Name = Console.ReadLine();
+            temp = Console.ReadLine();
+            productItem.Name = temp != "" ? temp : "%%%%% Ogiltligt produktnamn %%%%%";
 
             Console.Write("Kategori: ");
-            theProduct.Category = Console.ReadLine();
+            productItem.Category = Console.ReadLine();
 
             Console.Write("Produktbeskrivning: ");
-            theProduct.Description = Console.ReadLine();
+            productItem.Description = Console.ReadLine();
 
             Console.Write("Pris ex moms: ");
-            theProduct.Price = Convert.ToDecimal(Console.ReadLine());
+            temp = Console.ReadLine();
+            productItem.Price = Convert.ToDecimal(temp != "" ? temp : "0");
 
             Console.Write("Antal i lager: ");
-            theProduct.Quantity = Convert.ToDecimal(Console.ReadLine());
+            temp = Console.ReadLine();
+            productItem.Quantity = Convert.ToDecimal(temp != "" ? temp : "0");
 
-            theProduct.Id = ((Guid.NewGuid().ToString()).Split("-"))[0];
+            productItem.Id = ((Guid.NewGuid().ToString()).Split("-"))[0];
 
-            Console.WriteLine($"\n\nProdukt förberedd: {theProduct.Id} {theProduct.Name}");
-            Console.WriteLine("____________________________________");
+            Console.WriteLine($"\n\nProdukt förberedd: {productItem.Id} {productItem.Name}");
 
+            if (productItem.Name != "%%%%% Ogiltligt produktnamn %%%%%" && productItem.Price > 0 && productItem.Quantity > 0)
+            {
+                Console.WriteLine("____________________________________");
+                lh.Write(productItem, TheList);
+            }
+            else { Console.WriteLine(productItem.Id + "kunde INTE skrivas till listan"); }
         }
 
         public void Purge(List<ProductModel> TheList)
@@ -56,7 +68,7 @@ namespace Exercise3.Handlers
             Console.WriteLine("%%%%%%%%%% Ta bort produkt från listan: %%%%%%%%%%\n\n");
             Console.Write("Skriv produktID :  ");
             string searchTerm = Console.ReadLine();
-            bool res = ListHandler.Delete(TheList, searchTerm);
+            bool res = lh.Delete(TheList, searchTerm);
             if (!res) Console.WriteLine($"%%%%%%%%%% Något är fel, kunde inte radera { searchTerm} %%%%%%%%%% ");
             else Console.WriteLine($"ProduktID : {searchTerm} är nu raderad!");
         }

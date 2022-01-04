@@ -16,13 +16,13 @@ namespace Exercise3.Interfaces
         /// </summary>
         /// <param name="anItem"></param>
         /// <param name="aList"></param>
-        void Write(ProductModel anItem, List<ProductModel> aList);
+        void Write(ProductModel anObject, List<ProductModel> aList);
 
         /// <summary>
         /// Show all items in a list
         /// </summary>
         /// <param name="aList"></param>
-        void Print(List<ProductModel> aList);
+        public void Print(List<ProductModel> aList);
 
         /// <summary>
         /// Looks up an item in a list by id
@@ -30,13 +30,13 @@ namespace Exercise3.Interfaces
         /// <param name="aList"></param>
         /// <param name="searchterm"></param>
         /// <returns>Item<ProductModel></returns>
-        extern ProductModel FindItem(List<ProductModel> aList, string searchterm);
+        public ProductModel FindItem(List<ProductModel> aList, string searchterm);
 
         /// <summary>
         /// Remove an item from a list by id
         /// </summary>
         /// <param name="aList"></param>
         /// <param name="searchterm"></param>
-        extern void Delete(List<ProductModel> aList, string searchterm);
+        public bool Delete(List<ProductModel> aList, string searchterm);
     }
 }

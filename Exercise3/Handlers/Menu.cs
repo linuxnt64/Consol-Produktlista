@@ -5,9 +5,10 @@ namespace Exercise3.Handlers
 {
     public class Menu : IMenu
     {
-
-        public ListHandler listHandler = new();
         public ProductHandler productHandler = new();
+        public ListHandler listhandler = new();
+        public FileHandler fileHandler = new();
+
         public List<ProductModel> almostDB = new();
 
         public static string fileLocation = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\ProductList2.txt";
@@ -32,17 +33,15 @@ namespace Exercise3.Handlers
             char MenuPick;
             do
             {
-                ProductModel productItem = new();
                 MenuPick = (Console.ReadKey().KeyChar);
                 Console.Clear();
                 switch (MenuPick)
                 {
                     case '1':
-                        productHandler.Poke(productItem);
-                        listHandler.Write(productItem, almostDB);
+                        productHandler.Poke(almostDB);
                         break;
                     case '2':
-                        listHandler.Print(almostDB);
+                        listhandler.Print(almostDB);
                         break;
                     case '3':
                         productHandler.Peek(almostDB);
@@ -51,10 +50,10 @@ namespace Exercise3.Handlers
                         productHandler.Purge(almostDB);
                         break;
                     case '6':
-                        almostDB = FileHandler.Retrieve(fileLocation);
+                        almostDB = fileHandler.Retrieve(fileLocation);
                         break;
                     case '7':
-                        FileHandler.Stowe(fileLocation, almostDB);
+                        fileHandler.Stowe(fileLocation, almostDB);
                         break;
                     default:
                         ShowMenu();

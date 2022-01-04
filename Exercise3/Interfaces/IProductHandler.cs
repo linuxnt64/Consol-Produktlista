@@ -20,7 +20,7 @@ namespace Exercise3.Interfaces
         /// </summary>
         /// <param name="SomeProduct"></param>
 
-        void Poke(ProductModel SomeProduct);
+        void Poke(List<ProductModel> SomeList);
 
         /// <summary>
         /// Clean item object 

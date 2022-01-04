@@ -11,7 +11,7 @@ namespace Exercise3.Handlers
 {
     public class FileHandler : IFileHandler
     {
-        public static void Stowe(string path, List<ProductModel> TheList)
+        public void Stowe(string path, List<ProductModel> TheList)
         {
             try
             {
@@ -19,9 +19,7 @@ namespace Exercise3.Handlers
                 using (StreamWriter sw = new StreamWriter(path))
                 {
                     sw.Write(JsonConvert.SerializeObject(TheList));
-                    Console.ReadKey();
                 }
-
             }
             catch
             {
@@ -33,7 +31,7 @@ namespace Exercise3.Handlers
 
         }
 
-        public static List<ProductModel> Retrieve(string path)
+        public List<ProductModel> Retrieve(string path)
         {
             Console.WriteLine("Reading data from: " + path);
             try

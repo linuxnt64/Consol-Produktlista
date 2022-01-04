@@ -18,11 +18,11 @@ namespace Exercise3.Handlers
             Console.WriteLine("Id_______Benämning____Första 35 tkn i beskrivningen\n");
             foreach (var item in TheList)
             {
-                Console.WriteLine($"{item.Id} {item.Name}     {item.Description.Substring(0,35)}\n");
+                Console.WriteLine($"{item.Id}  {item.Name}     {item.Description.Substring(0, item.Description.Length<=35 ? item.Description.Length : 35)}\n");
             }
         }
 
-        public static ProductModel FindItem(List<ProductModel> TheList, string term)
+        public ProductModel FindItem(List<ProductModel> TheList, string term)
         {
             foreach (ProductModel findItem in TheList)
             {
@@ -31,7 +31,7 @@ namespace Exercise3.Handlers
             return null;
         }
 
-        public static bool Delete(List<ProductModel> TheList, string term)
+        public bool Delete(List<ProductModel> TheList, string term)
         {
             ProductModel foundItem = new();
             foreach (ProductModel Item in TheList)
@@ -46,7 +46,6 @@ namespace Exercise3.Handlers
             return TheList.Remove(foundItem);
         }
         
-
     }
 }
-
+ 
